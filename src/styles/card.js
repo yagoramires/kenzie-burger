@@ -25,7 +25,7 @@ export const StyledCard = styled.li`
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 
@@ -79,5 +79,6 @@ export const StyledCartCard = styled.li`
     height: 80px;
     border-radius: 5px;
     background: var(--gray-20);
+    object-fit: cover;
   }
 `;

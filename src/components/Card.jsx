@@ -6,8 +6,14 @@ import { toast } from 'react-toastify';
 
 const Card = ({ product, currentSale, setCurrentSale }) => {
   const handleAddProduct = () => {
-    setCurrentSale([...currentSale, product]);
-    toast.success('Produto adicionado ao carrinho.');
+    const verify = currentSale.filter((prod) => prod.id === product.id);
+
+    if (verify.length > 0) {
+      return toast.error('Produto já adicionado ao carrinho');
+    } else {
+      setCurrentSale([...currentSale, product]);
+      return toast.success('Produto adicionado ao carrinho.');
+    }
   };
 
   return (
