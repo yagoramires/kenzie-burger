@@ -19,12 +19,12 @@ export const StyledButton = styled.button`
 
   transition: all 0.2s ease-in;
 
-  border: ${({ type }) => {
-    if (type === 'green') {
+  border: ${({ color }) => {
+    if (color === 'green') {
       return css`
         2px solid var(--color-primary)
         `;
-    } else if (type === 'gray') {
+    } else if (color === 'gray') {
       return css`
         2px solid var(--gray-20) 
     `;
@@ -33,13 +33,13 @@ export const StyledButton = styled.button`
 
   border-radius: 8px;
 
-  background: ${({ type }) => {
-    if (type === 'green') {
+  background: ${({ color }) => {
+    if (color === 'green') {
       return css`
     var(--color-primary)
     
     `;
-    } else if (type === 'gray') {
+    } else if (color === 'gray') {
       return css`
     var(--gray-20)
     
@@ -48,13 +48,13 @@ export const StyledButton = styled.button`
   }};
 
   :hover {
-    background: ${({ type }) => {
-      if (type === 'green') {
+    background: ${({ color }) => {
+      if (color === 'green') {
         return css`
     var(--color-primary-50)
     
     `;
-      } else if (type === 'gray') {
+      } else if (color === 'gray') {
         return css`
     var(--gray-300)
     
@@ -62,12 +62,12 @@ export const StyledButton = styled.button`
       }
     }};
 
-    border: ${({ type }) => {
-      if (type === 'green') {
+    border: ${({ color }) => {
+      if (color === 'green') {
         return css`
         2px solid var(--color-primary-50)
         `;
-      } else if (type === 'gray') {
+      } else if (color === 'gray') {
         return css`
         2px solid var(--gray-300)
     `;

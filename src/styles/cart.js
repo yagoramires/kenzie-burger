@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const StyledCart = styled.div`
   width: 100%;
   border-radius: 5px;
+  background: var(--gray-0);
+
   .title {
     width: 100%;
     padding: 20px;
@@ -15,7 +17,6 @@ export const StyledCart = styled.div`
   .cart {
     width: 100%;
     padding: 20px 10px;
-    background: var(--gray-0);
     border-radius: 0px 0px 5px 5px;
 
     display: flex;
@@ -42,6 +43,40 @@ export const StyledCart = styled.div`
       > p {
         margin-bottom: 3rem;
       }
+    }
+  }
+
+  .total {
+    width: 100%;
+    padding: 20px 10px;
+
+    border-top: 2px solid var(--gray-20);
+    border-radius: 0px 0px 5px 5px;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    p:nth-of-type(1) {
+      font-weight: 600;
+      color: var(--gray-100);
+    }
+
+    p:nth-of-type(2) {
+      font-weight: 600;
+      color: var(--gray-50);
+    }
+
+    button {
+      margin-top: 22px;
+      width: 100%;
+      color: var(--gray-50);
+    }
+
+    button:hover {
+      color: var(--gray-20);
     }
   }
 

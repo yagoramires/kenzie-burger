@@ -5,10 +5,13 @@ import ProductsList from './components/ProductsList';
 import { api } from './services/api';
 import { GlobalStyle } from './styles/global';
 import { StyledSection } from './styles/section';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [products, setProducts] = useState([]);
-  // const [filteredProducts, setFilteredProducts] = useState([]);
+  const [search, setSearch] = useState('');
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
 
@@ -26,19 +29,38 @@ function App() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const total = currentSale.reduce((acc, cur) => acc + cur.price, 0);
+    setCartTotal(total);
+  }, [currentSale]);
+
   return (
     <div className='App'>
-      <GlobalStyle />
-      <Header />
+      <Header
+        search={search}
+        setSearch={setSearch}
+        products={products}
+        setFilteredProducts={setFilteredProducts}
+      />
 
       <StyledSection>
         <ProductsList
           products={products}
+          search={search}
+          filteredProducts={filteredProducts}
+          setFilteredProducts={setFilteredProducts}
           currentSale={currentSale}
           setCurrentSale={setCurrentSale}
         />
-        <Cart currentSale={currentSale} setCurrentSale={setCurrentSale} />
+        <Cart
+          currentSale={currentSale}
+          setCurrentSale={setCurrentSale}
+          cartTotal={cartTotal}
+        />
       </StyledSection>
+
+      <ToastContainer autoClose={2000} position={toast.POSITION.BOTTOM_RIGHT} />
+      <GlobalStyle />
     </div>
   );
 }

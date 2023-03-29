@@ -9,6 +9,26 @@ export const StyledCard = styled.li`
   align-items: flex-start;
   gap: 14px;
 
+  border: 2px solid var(--gray-20);
+  border-radius: 5px;
+  overflow: hidden;
+
+  .imageContainer {
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--gray-0);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
   p:nth-of-type(1) {
     color: var(--gray-300);
   }

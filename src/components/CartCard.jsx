@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import { StyledCartCard } from '../styles/card';
 import { Caption, Heading4 } from '../styles/typography';
 
@@ -7,6 +8,7 @@ const CartCard = ({ product, currentSale, setCurrentSale }) => {
     const filter = currentSale.filter((prod) => prod.id !== product.id);
 
     setCurrentSale(filter);
+    toast.success('Produto removido do carrinho.');
   };
 
   return (

@@ -19,6 +19,16 @@ export const StyledProductsList = styled.div`
     width: 0px;
   }
 
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      color: var(--gray-300);
+    }
+  }
+
   @media (min-width: 1280px) {
     ul {
       max-width: 940px;

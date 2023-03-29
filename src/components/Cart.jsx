@@ -1,9 +1,16 @@
 import React from 'react';
+import { toast } from 'react-toastify';
+import { StyledButton } from '../styles/buttons';
 import { StyledCart } from '../styles/cart';
-import { Body, Heading3 } from '../styles/typography';
+import { Body, Heading3, Headline } from '../styles/typography';
 import CartCard from './CartCard';
 
-const Cart = ({ currentSale, setCurrentSale }) => {
+const Cart = ({ currentSale, setCurrentSale, cartTotal }) => {
+  const handleRemoveAll = () => {
+    setCurrentSale([]);
+    toast.success('Todos os produtos foram removidos do carrinho.');
+  };
+
   return (
     <StyledCart>
       <div className='title'>
@@ -12,9 +19,9 @@ const Cart = ({ currentSale, setCurrentSale }) => {
       <div className='cart'>
         {currentSale.length > 0 ? (
           <ul>
-            {currentSale.map((product) => (
+            {currentSale.map((product, index) => (
               <CartCard
-                key={product.id}
+                key={index}
                 product={product}
                 currentSale={currentSale}
                 setCurrentSale={setCurrentSale}
@@ -27,6 +34,20 @@ const Cart = ({ currentSale, setCurrentSale }) => {
             <Body>Adicione itens</Body>
           </div>
         )}
+      </div>
+      <div className='total'>
+        <div>
+          <Headline>Total</Headline>
+          <Body>
+            {cartTotal.toLocaleString('pt-BR', {
+              style: 'currency',
+              currency: 'BRL',
+            })}
+          </Body>
+        </div>
+        <StyledButton color='gray' size='default' onClick={handleRemoveAll}>
+          Remover todos
+        </StyledButton>
       </div>
     </StyledCart>
   );
