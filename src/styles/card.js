@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledCard = styled.li`
-  min-width: 300px;
-  padding: 20px;
+  max-width: 300px;
+  height:400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 14px;
 
@@ -24,9 +24,20 @@ export const StyledCard = styled.li`
     background: var(--gray-0);
     img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: 150px;
+      object-fit: contain;
     }
+  }
+
+  .dataContainer {
+    display: flex;
+    flex:1;
+    height: 100%;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
   }
 
   p:nth-of-type(1) {
@@ -36,6 +47,10 @@ export const StyledCard = styled.li`
   p:nth-of-type(2) {
     color: var(--color-primary);
     font-weight: 600;
+  }
+
+  @media (max-width: 1280px) {
+    min-width: 300px;
   }
 `;
 
