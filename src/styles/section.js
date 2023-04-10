@@ -4,7 +4,7 @@ export const StyledSection = styled.section`
   width: 100%;
   max-width: 1280px;
   padding: 10px;
-  margin: 0 auto;
+  margin: 16px auto;
 
   @media (min-width: 1280px) {
     display: flex;

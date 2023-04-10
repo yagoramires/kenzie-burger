@@ -34,7 +34,6 @@ const ProductsList = ({
           </div>
 
           <ul>
-            {' '}
             {filteredProducts &&
               filteredProducts.map((product) => (
                 <StyledCard

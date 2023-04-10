@@ -4,6 +4,7 @@ export const StyledCart = styled.div`
   width: 100%;
   border-radius: 5px;
   background: var(--gray-0);
+  margin-top: 16px;
 
   .title {
     width: 100%;
@@ -82,5 +83,6 @@ export const StyledCart = styled.div`
 
   @media (min-width: 1280px) {
     max-width: 365px;
+    margin-top: 0;
   }
 `;

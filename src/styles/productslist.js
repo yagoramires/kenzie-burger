@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledProductsList = styled.div`
   overflow: hidden;
+  flex: 1;
 
   ul {
     max-width: 100%;
@@ -20,6 +21,7 @@ export const StyledProductsList = styled.div`
   }
 
   .searchContainer {
+    margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;

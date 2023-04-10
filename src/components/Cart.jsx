@@ -35,6 +35,8 @@ const Cart = ({ currentSale, setCurrentSale, cartTotal }) => {
           </div>
         )}
       </div>
+      {cartTotal > 0 && (
+        
       <div className='total'>
         <div>
           <Headline>Total</Headline>
@@ -49,6 +51,7 @@ const Cart = ({ currentSale, setCurrentSale, cartTotal }) => {
           Remover todos
         </StyledButton>
       </div>
+      )}
     </StyledCart>
   );
 };
