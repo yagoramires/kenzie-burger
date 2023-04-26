@@ -47,6 +47,7 @@ function App() {
         <ProductsList
           products={products}
           search={search}
+          setSearch={setSearch}
           filteredProducts={filteredProducts}
           setFilteredProducts={setFilteredProducts}
           currentSale={currentSale}

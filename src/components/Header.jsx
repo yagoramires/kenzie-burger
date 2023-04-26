@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyledHeader } from '../styles/Header';
 import { StyledForm } from '../styles/form';
 import { StyledButton } from '../styles/buttons';

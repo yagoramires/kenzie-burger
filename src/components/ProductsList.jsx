@@ -11,9 +11,11 @@ const ProductsList = ({
   filteredProducts,
   setFilteredProducts,
   search,
+  setSearch,
 }) => {
   const handleClearSearch = () => {
     setFilteredProducts([]);
+    setSearch('');
   };
 
   return (
