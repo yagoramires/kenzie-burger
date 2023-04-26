@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledCard = styled.li`
-  max-width: 300px;
-  height:400px;
+  width: 280px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,7 +31,7 @@ export const StyledCard = styled.li`
 
   .dataContainer {
     display: flex;
-    flex:1;
+    flex: 1;
     height: 100%;
     padding: 20px;
     flex-direction: column;

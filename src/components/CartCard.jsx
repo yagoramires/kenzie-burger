@@ -14,12 +14,7 @@ const CartCard = ({ product, currentSale, setCurrentSale }) => {
   return (
     <StyledCartCard>
       <div>
-        <img
-          src={
-            'https://classic.exame.com/wp-content/uploads/2020/05/mafe-studio-LV2p9Utbkbw-unsplash-1.jpg?quality=70&strip=info&w=1024'
-          }
-          alt=''
-        />
+        <img src={product.img} alt={product.name} />
         <div>
           <Heading4>{product.name}</Heading4>
           <Caption>{product.category}</Caption>

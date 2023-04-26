@@ -4,6 +4,7 @@ export const StyledHeader = styled.header`
   background: var(--gray-0);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
+  margin-bottom: 32px;
 
   div {
     margin: 0 auto;
